@@ -1,5 +1,8 @@
 version: 0.1
 phases:
+    pre-install:
+        commands:
+          - aws 
     install:
         commands:
           - aws cloudformation package --template-file template.yaml --s3-bucket stockx-lambda --output-template-file output-template.yaml
