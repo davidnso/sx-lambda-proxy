@@ -7,7 +7,7 @@ phases:
           - aws configure set aws_secret_access_key mBty3lM9c0bCJHGNcyogdTq33jkstf9+5n6I1lDy
     install:
         commands:
-          - aws cloudformation package --template-file template.yaml --s3-bucket stockx-lambda --output-template-file output-template.yaml
+          - aws cloudformation package --template-file template.yaml --kms-key-id arn:aws:kms:us-east-1:768805117661:key/8c5afcfd-4975-4880-8ee7-c67a102fa147 --s3-bucket stockx-lambda --output-template-file output-template.yaml
 artifacts:
     type: zip
     files:
