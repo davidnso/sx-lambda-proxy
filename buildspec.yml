@@ -1,6 +1,6 @@
 version: 0.1
 phases:
-    setup:
+    build:
         commands:
           - aws configure set region us-east-1 
           - aws configure set aws_access_key_id AKIA3GAC3D3OXHC7IOW2
