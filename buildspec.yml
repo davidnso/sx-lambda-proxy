@@ -1,5 +1,10 @@
 version: 0.1
 phases:
+    setup:
+        commands:
+          - aws configure set region us-east-1 
+          - aws configure set aws_access_key_id AKIA3GAC3D3OXHC7IOW2
+          - aws configure set aws_secret_access_key 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
     install:
         commands:
           - aws cloudformation package --template-file template.yaml --s3-bucket stockx-lambda --output-template-file output-template.yaml
